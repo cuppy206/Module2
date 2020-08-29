@@ -1,27 +1,10 @@
 * {
     box-sizing: border-box;
 }
-
-
-.row {
-    width: 100%;
-}
-
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
    
-
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    border: 1px solid purple;
+body {
+    display: inline-flexbox;
 }
-
 
 /**** For Desktop ****/
 @media only screen and (min-width: 768px)
@@ -68,11 +51,21 @@ html {
     font-family: "Lucinda Sans", sans-serif;
 }
 
+.row {
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 
 #chicken{
-  
+    position: relative;
     overflow:hidden;
-    background: skyblue;
+    background: rgb(181, 190, 199);
     margin: 20px auto;
     padding: 20px;
     border: 3px solid black;
@@ -80,35 +73,80 @@ html {
 
 }
 
+.chicken
+{
+background-color:lightcyan;
+width: 60px;
+height: 30px;
+border: 2px solid black;
+text-align: center;
+position: absolute;
+top:0;
+right: 0;
+
+clear: left;
+overflow: hidden;
+border-top: none;
+border-right: none;
+}
 
 
 #beef{
+    position: relative;
     overflow: hidden;
-    background: skyblue;
+    background: rgb(181, 190, 199);
     margin: 20px auto;
     padding: 20px;
     border: 3px solid black;
 }
 
 
-.protein
+.beef
 {
-background-color:yellow;
+background-color:lightsteelblue;
 width: 60px;
 height: 30px;
 border: 2px solid black;
 text-align: center;
-float: right;
-box-sizing: border-box;
-clear: left
+position: absolute;
+top:0;
+right: 0;
+
+clear: left;
+overflow: hidden;
+border-top: none;
+border-right: none;
 }
 
 
 #sushi{
+    position: relative;
     overflow: hidden;
-    background: skyblue;
+    background:rgb(181, 190, 199);
     margin: 20px auto;
     padding: 20px;
-    border: 3px solid black; 
+    border: 3px solid black;
 }
 
+.sushi
+{
+background-color:lightpink;
+width: 60px;
+height: 30px;
+border: 2px solid black;
+text-align: center;
+position: absolute;
+top:0;
+right: 0;
+
+clear: left;
+overflow: hidden;
+border-top: none;
+border-right: none;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 0px;
+    border: 1px solid purple;
+}
